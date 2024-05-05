@@ -6,13 +6,13 @@
 /*   By: aakouhar <aakouhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:50:19 by aakouhar          #+#    #+#             */
-/*   Updated: 2024/05/05 16:48:04 by aakouhar         ###   ########.fr       */
+/*   Updated: 2024/05/05 16:07:44 by aakouhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../push_swap_bonus.h"
 
-t_stack	*find_new_last(t_stack **a)
+t_stack	*find_new_last_bonus(t_stack **a)
 {
 	while (*a)
 	{
@@ -23,14 +23,14 @@ t_stack	*find_new_last(t_stack **a)
 	return (NULL);
 }
 
-void	rev_rotate(t_stack **a)
+void	rev_rotate_bonus(t_stack **a)
 {
 	t_stack	*new_last;
 	t_stack	*tmp;
 	t_stack	*last;
 
 	tmp = *a;
-	new_last = find_new_last(a);
+	new_last = find_new_last_bonus(a);
 	*a = tmp;
 	last = ft_lstlast(*a);
 	*a = tmp;
@@ -39,27 +39,24 @@ void	rev_rotate(t_stack **a)
 	new_last->next = NULL;
 }
 
-void	rra(t_stack **a)
+void	rra_bonus(t_stack **a)
 {
 	if (!(*a))
 		return ;
-	rev_rotate(a);
-	write(1, "rra\n", 4);
+	rev_rotate_bonus(a);
 }
 
-void	rrb(t_stack **b)
+void	rrb_bonus(t_stack **b)
 {
 	if (!(*b))
 		return ;
-	rev_rotate(b);
-	write(1, "rrb\n", 4);
+	rev_rotate_bonus(b);
 }
 
-void	rrr(t_stack **a, t_stack **b)
+void	rrr_bonus(t_stack **a, t_stack **b)
 {
 	if (!(*a) || !(*b))
 		return ;
-	rev_rotate(a);
-	rev_rotate(b);
-	write(1, "rrr\n", 4);
+	rev_rotate_bonus(a);
+	rev_rotate_bonus(b);
 }

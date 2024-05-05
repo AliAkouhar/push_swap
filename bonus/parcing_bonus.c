@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parcing.c                                          :+:      :+:    :+:   */
+/*   parcing_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakouhar <aakouhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 17:44:33 by aakouhar          #+#    #+#             */
-/*   Updated: 2024/05/05 17:10:32 by aakouhar         ###   ########.fr       */
+/*   Created: 2024/05/05 11:22:34 by aakouhar          #+#    #+#             */
+/*   Updated: 2024/05/05 17:10:35 by aakouhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	print_error(void)
-{
-	write(1, "Error\n", 6);
-	exit(1);
-}
+#include "push_swap_bonus.h"
 
 void	ft_check(char **av, t_ps *ps, t_stack **a)
 {
@@ -44,5 +38,5 @@ void	ft_check(char **av, t_ps *ps, t_stack **a)
 	ft_fill_stack(a, ps);
 	check_repeat(ps);
 	ft_sort(ps);
-	ft_check_sort(ps, a);
+	check_sort(ps, *a);
 }

@@ -6,7 +6,7 @@
 /*   By: aakouhar <aakouhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 16:36:31 by aakouhar          #+#    #+#             */
-/*   Updated: 2024/05/03 17:21:25 by aakouhar         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:31:48 by aakouhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_check_sort(t_ps *ps, t_stack **a)
 		i++;
 		(*a) = (*a)->next;
 	}
-	printf("sorted\n");
 	exit(0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: aakouhar <aakouhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:57:11 by aakouhar          #+#    #+#             */
-/*   Updated: 2024/05/03 17:34:06 by aakouhar         ###   ########.fr       */
+/*   Updated: 2024/05/05 16:48:42 by aakouhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	swap(t_stack **ab)
 
 void	sa(t_stack **a)
 {
-	if (!a)
+	if (!(*a))
 		return ;
 	swap(a);
 	write(1, "sa\n", 3);
@@ -32,7 +32,7 @@ void	sa(t_stack **a)
 
 void	sb(t_stack **b)
 {
-	if (!b)
+	if (!(*b))
 		return ;
 	swap(b);
 	write(1, "sb\n", 3);
@@ -40,9 +40,9 @@ void	sb(t_stack **b)
 
 void	ss(t_stack **a, t_stack **b)
 {
-	if (!a || !b)
+	if (!(*a) || !(*b))
 		return ;
-	sa(a);
-	sb(b);
+	swap(a);
+	swap(b);
 	write(1, "ss\n", 3);
 }
